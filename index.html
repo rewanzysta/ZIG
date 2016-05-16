@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>ZIWG</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ziwg.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+<div onmousemove="myFunction(event)">
+    <div class="container">
+
+      <div id="upperDiv">
+        <h1>ZIWG</h1>
+        <p class="lead">Block configuration</p>
+        <div id="board">
+		<canvas id="myCanvas" width="1000" height="600" style="border:1px solid #000000;">
+		</canvas>
+          <!-- <div class="box" id="box1"></div> -->
+		  </div>
+      </div>
+      <button class="btn btn-default" type="submit" id="addBlock">Add Block</button>
+	  <button type="submit" id="Output" onclick="output()">Output</button>
+    
+    </div><!-- /.container -->
+
+	  
+
+    <!-- JavaScript
+    ================================================== -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/backbone-min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/CSSPlugin.min.js"></script>
+    <script src="js/Draggable.min.js"></script>
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/ziwg.js"></script>
+	
+	<script>
+		//var x = document.getElementById("box1").style.left;
+		//document.onMouseMove();
+	
+	</script>
+    </div>
+  </body>
+</html>
