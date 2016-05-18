@@ -209,6 +209,39 @@ function myFunction(e) {
 				ctx.stroke();
 				
 	}
+	if(draw==true)
+	{
+				var element = document.getElementById(pair[0]);
+				//console.log(window.getComputedStyle(element).transform);
+				var str=window.getComputedStyle(element).transform;
+				var res = str.split("(");
+				//console.log(xx);
+				//console.log(res[1]);
+				res = res[1].split(")");
+				res = res[0].split(",");
+				//console.log(res);
+				
+				var X1 = parseInt(res[4]); var Y1 = parseInt(res[5]);
+		
+				ctx.beginPath();
+				ctx.lineWidth="5";
+				ctx.strokeStyle="red"; // Green path
+				ctx.moveTo(X1,Y1);
+				
+				var pos = getMousePos(cnv, e);
+				posx = pos.x;
+				posy = pos.y;
+				ctx.lineTo(posx,posy);
+				ctx.stroke();
+	}
+}
+
+function getMousePos(cnv, evt) {
+    var rect = cnv.getBoundingClientRect();
+    return {
+      x: evt.clientX - rect.left,
+      y: evt.clientY - rect.top
+    };
 }
 
 function getConfig(){
